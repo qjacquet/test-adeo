@@ -1,4 +1,16 @@
-# Javascript
+# Test-Adeo
+
+## Install
+`yarn install`
+
+## Test
+Tests with jest
+
+`yarn test`
+
+## Run
+`node app.js --filter="ry"`
+`node app.js -- count`
 
 ## Context
 Your job is to write a command-line interface in Node.js. 
