@@ -1,5 +1,14 @@
 # Test-Adeo
 
+## Prerequisites
+- NodeJS (latest)
+- Yarn (latest)
+
+## Get
+`git clone https://github.com/qjacquet/test-adeo.git`
+
+`cd test-adeo`
+
 ## Install
 `yarn install`
 
@@ -10,9 +19,12 @@ Tests with jest
 
 ## Run
 `node app.js --filter="ry"`
+
 `node app.js -- count`
 
-## Context
+## Explanations
+
+### Context
 Your job is to write a command-line interface in Node.js. 
 This program has to filter a list of elements containing a pattern.
 
@@ -68,11 +80,11 @@ node app.js --count
 ]
 ```
 
-## Requirements
+### Requirements
 - The code must be available in a GIT repository
 - No library/modules should be used, except for the testing library
 
-## Appreciation
+### Appreciation
 - Code readability, structure and consistency
 - Tests, how they are written
 - Bonus: usage of Functional concepts
