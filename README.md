@@ -20,7 +20,7 @@ Tests with jest
 ## Run
 `node app.js --filter="ry"`
 
-`node app.js -- count`
+`node app.js --count`
 
 ## Explanations
 
