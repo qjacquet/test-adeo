@@ -1,10 +1,14 @@
 #!/usr/bin/env node
 
 const filter = require("./src/commands/filter");
+const count = require("./src/commands/count");
 const printJson = require("./src/utils");
 
-const errorMsg = (param, argType) =>
-  `Incorrect argument. Please try with '${param}=[${argType}]'`;
+const paramErrorMsg = (param, argType) =>
+  `Incorrect param for this argument. Please try with '${param}=[${argType}]'`;
+
+const errorMessage = () =>
+  `Incorrect argument. Please check possible commands on the Readme.`;
 
 /**
  * MAIN
@@ -17,10 +21,17 @@ let args = process.argv[2];
 if (args && args.includes("--filter")) {
   const param = args.split("=")[1];
 
-  param ? printJson(filter(param)) : console.log(errorMsg("--filter", "text"));
+  param
+    ? printJson(filter(param))
+    : console.log(paramErrorMsg("--filter", "text"));
+}
+
+// --count
+else if (args && args.includes("--count")) {
+  printJson(count());
 }
 
 // Otherwise, show a default message
 else {
-  console.log(errorMsg("--filter", "text"));
+  console.log(errorMessage());
 }
